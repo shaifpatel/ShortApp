@@ -11,6 +11,7 @@ const createhashtags = async (req, resp) => {
     resp.status(201).json({ data: data, message: "hashtag create successfully created" })
 }
 
+
 /////////   gethashtag   //////////
 const getHashtag = async (req, resp) => {
     const data = await Hashtag.findAll({ where: { userId: req.userId } })
