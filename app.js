@@ -4,7 +4,9 @@ const userRouter = require('./routes/userRouter')
 const app =express()
 const port = 3000
 const db =require('./model/index')
+
 require('./model/index')
+
 
 
 app.use(express.json())

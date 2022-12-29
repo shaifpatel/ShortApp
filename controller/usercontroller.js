@@ -6,7 +6,6 @@ const jwt_key = "jwt"
 
 
 
-
 ////////////   signup     ////////
 const signUp = async (req, resp) => {
     const { name, email, password } = req.body
@@ -42,7 +41,7 @@ const login = async (req, resp) => {
         resp.status(400).json({ message: "invalid credentials" })
     }
 
-    const token = await jwt.sign({ email: existingUser.email,id:existingUser.id }, jwt_key)
+    const token = await jwt.sign({ email: existingUser.email, id: existingUser.id }, jwt_key)
     resp.status(201).json({ data: existingUser, token: token })
 }
 

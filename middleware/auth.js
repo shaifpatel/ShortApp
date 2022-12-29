@@ -11,8 +11,6 @@ const auth = async (req, resp, next) => {
             token = token.split(' ')[1]
             const data = jwt.verify(token, jwt_key)
             req.userId = data.id
-            
-
         }
         else {
             resp.status({ message: "unauthorized user" })
